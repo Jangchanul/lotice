@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.8)">
+    <meta http-equiv="page-exit" content="blendTrans(duration=0.8)">
+    <title>로티스</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 체크박스 전체 선택
+            $(".checkbox_group").on("click", "#check_all", function () {
+                $(this).parents(".checkbox_group").find('input').prop("checked", $(this).is(
+                    ":checked"));
+            });
+
+            // 체크박스 개별 선택
+            $(".checkbox_group").on("click", ".normal", function () {
+                var is_checked = true;
+
+                $(".checkbox_group .normal").each(function () {
+                    is_checked = is_checked && $(this).is(":checked");
+                });
+
+                $("#check_all").prop("checked", is_checked);
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="hd_1">
+            <a href="javascript:history.back()" class="back"></a>
+            <p class="title">개인정보관리</p>
+        </div>
+    </header>
+    <section class="policy">
+        <p class="title">이용약관</p>
+        <div>
+            <p>제 1조(목적)</p>
+            <p>이 약관은 고고코리아(주)(이하 ‘회사’라 합니다)가 제공하는 로티스 서비스의 이용과 관련하여 회사와 회원과의 권리, 의무 및 책임사항 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+
+            <p>제 2조(약관의 게시와 개정)</p>
+            <ul>
+                <li>①회사는 이 약관을 회원이 그 전부를 인쇄할 수 있고 확인할 수 있도록 기술적 조치를 취합니다.</li>
+                <li>②회사는 회원이 약관에 동의하기에 앞서 약관에 정하여져 있는 내용 중 청약철회 등과 같은 중요한 내용을 회원이 쉽게 이해할 수 있도록 별도의 연결화면 또는 팝업화면 등을 제공합니다.</li>
+                <li>③회사는 ‘콘텐츠산업진흥법’, ‘약관의규제에관한법률’ 등 관련 법령을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.</li>
+                <li>
+                    ④회사가 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 서비스 초기 화면에 그 개정약관의 적용일자 7일 전부터 적용일자 전일까지 공지합니다. 다만, 회원에게 불리한 약관의 개정의
+                    경우에는 30일 전부터 적용일자 전일까지 공지하며, 공지 외에 일정기간 서비스 내 전자우편, 알림, 로그인시 동의창 등의 전자적 수단을 통해 따로 명확히 통지하도록 합니다.
+                </li>
+                <li>
+                    ⑤회사가 전항에 따라 개정약관을 공지 또는 통지하면서 회원에게 전항의 공지기간 내에 의사표시를 하지 않으면 의사표시가 표명된 것으로 본다는 뜻을 명확하게 공지 또는 통지하였음에도 회원이
+                    명시적으로 거부의 의사표시를 하지 아니한 경우 회원이 개정약관에 동의한 것으로 봅니다.
+                </li>
+                <li>
+                    ⑥회원이 개정약관의 적용에 동의하지 않는 경우 회사는 개정 약관의 내용을 적용할 수 없으며, 이 경우 회원은 이용계약을 해지할 수 있습니다. 다만, 기존 약관을 적용할 수 없는 특별한
+                    사정이 있는 경우에는 회사는 이용계약을 해지할 수 있습니다.
+                </li>
+                <li>⑦회원은 전항에 따른 이용계약의 해지로 손해가 발생한 경우 회사에 이에 대한 배상을 청구할 수 있습니다.</li>
+
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.8)">
+    <meta http-equiv="page-exit" content="blendTrans(duration=0.8)">
+    <title>로티스</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .mySwiper2 {
+            height: 80%;
+            width: 100%;
+        }
+
+        .mySwiper {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+            background: #fff;
+        }
+
+        .mySwiper .swiper-slide {
+            width: 25%;
+            height: 100%;
+            color: #666;
+            font-weight: lighter;
+        }
+
+        .mySwiper .swiper-slide-thumb-active {
+            color: #5F0080;
+            font-weight: normal;
+
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="hd_1">
+            <a href="javascript:history.back()" class="back"></a>
+            <h1><img src="../img/logo1.png" alt=""></h1>
+        </div>
+    </header>
+    <div class="contant_wrap contant_wrap3" style="overflow: hidden;">
+        <ul class="atten_ul atten_ul2">
+            <li style="border-bottom: 1px solid #ebebeb;" class="atten_li1">
+                <div>
+                    <p class="new_p">신규</p>
+                    <p class="normal_p">[2010.01.10]</p> <!--날짜는 무조건 마지막으로-->
+                    <div>
+                        <figure><img src="../img/ft2_on.png" alt=""></figure>
+                        <p>관심법안</p>
+                    </div>
+                </div>
+                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+            </li>
+        </ul>
+        <table class="re_table">
+            <tr>
+                <td>접수</td>
+                <td>소관위<br>심사</td>
+                <td>체계지구<br>심사</td>
+                <td>본회의<br>심사</td>
+                <td>정부이송</td>
+                <td>공표</td>
+            </tr>
+            <tr>
+                <td>21-07-26</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+            </tr>
+        </table>
+        <p class="red">내용표시</p>
+    </div>
+    <div class="trick"></div>
+    <footer>
+        <ul>
+            <li onclick="location.href='../index.html'">
+                <div class="ft_act"></div>
+                <p class="ft_act_p">홈</p>
+            </li>
+            <li onclick="location.href='./attention.html'">
+                <div></div>
+                <p>내 관심법안</p>
+            </li>
+            <li onclick="location.href='./category.html'">
+                <div></div>
+                <p>카테고리</p>
+            </li>
+            <li onclick="location.href='./search.html'">
+                <div></div>
+                <p>검색</p>
+            </li>
+            <li onclick="location.href='./set.html'">
+                <div></div>
+                <p>설정</p>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

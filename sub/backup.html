@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.8)">
+    <meta http-equiv="page-exit" content="blendTrans(duration=0.8)">
+    <title>로티스</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .mySwiper2 {
+            height: 80%;
+            width: 100%;
+        }
+
+        .mySwiper {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 2.888vw 0;
+            background: #fff;
+            box-shadow: 0px 3px 6px #0000001A;
+        }
+
+        .mySwiper .swiper-slide {
+            width: 25%;
+            height: 100%;
+            color: #666;
+            font-weight: lighter;
+        }
+
+        .mySwiper .swiper-slide-thumb-active {
+            color: #5F0080;
+            font-weight: normal;
+
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('ul.tabs li').click(function () {
+                var tab_id = $(this).attr('data-tab');
+
+                $('ul.tabs li').removeClass('current');
+                $('.tab-content').removeClass('current');
+
+                $(this).addClass('current');
+                $("#" + tab_id).addClass('current');
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="hd_1">
+            <a href="javascript:history.back()" class="back"></a>
+            <h1><img src="../img/logo1.png" alt=""></h1>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper hd_fix">
+                <div class="swiper-slide">접수</div>
+                <div class="swiper-slide">소관위심사</div>
+                <div class="swiper-slide">본회의심사</div>
+                <div class="swiper-slide">정부이송</div>
+                <div class="swiper-slide">공표</div>
+            </div>
+        </div>
+    </header>
+    <div class="contant_wrap contant_wrap2" style="overflow: hidden;">
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                </div>
+                <div class="swiper-slide">
+                    <ul class="atten_ul">
+                        <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                            <div>
+                                <p class="new_p">신규</p>
+                                <p class="normal_p">[2010.01.10]</p>
+                                <!--날짜는 무조건 마지막으로-->
+                            </div>
+                            <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                        </li>
+                        <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                            <div>
+                                <p class="normal_p">[2010.01.10]</p>
+                                <!--날짜는 무조건 마지막으로-->
+                            </div>
+                            <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                        </li>
+                        <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                            <div>
+                                <p class="normal_p">[2010.01.10]</p>
+                                <!--날짜는 무조건 마지막으로-->
+                            </div>
+                            <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                        </li>
+                        <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                            <div>
+                                <p class="normal_p">[2010.01.10]</p>
+                                <!--날짜는 무조건 마지막으로-->
+                            </div>
+                            <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <div class="container">
+                        <ul class="tabs">
+                            <li class="tab-link current" data-tab="tab-1">접수</li>
+                            <li class="tab-link" data-tab="tab-2">가결</li>
+                            <li class="tab-link" data-tab="tab-3">부결</li>
+                            <li class="tab-link" data-tab="tab-4">철회</li>
+                            <li class="tab-link" data-tab="tab-5">폐기</li>
+                        </ul>
+                    </div>
+                    <div id="tab-1" class="tab-content current">
+                        <ul class="atten_ul">
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="new_p">신규</p>
+                                    <p class="new_b">접수</p>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab-2" class="tab-content">
+                        <ul class="atten_ul">
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="new_p">신규</p>
+                                    <p class="new_a">가결</p>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab-3" class="tab-content">
+                        <ul class="atten_ul">
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="new_p">신규</p>
+                                    <p class="new_c">부결</p>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab-4" class="tab-content">
+                        <ul class="atten_ul">
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="new_p">신규</p>
+                                    <p class="new_d">철회</p>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab-5" class="tab-content">
+                        <ul class="atten_ul">
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="new_p">신규</p>
+                                    <p class="new_e">폐기</p>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                            <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                                <div>
+                                    <p class="normal_p">[2010.01.10]</p>
+                                    <!--날짜는 무조건 마지막으로-->
+                                </div>
+                                <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="swiper-slide">
+                    <ul class="atten_ul">
+                        <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                            <div>
+                                <p class="new_p">신규</p>
+                                <p class="normal_p">[2010.01.10]</p>
+                                <!--날짜는 무조건 마지막으로-->
+                            </div>
+                            <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                        </li>
+                        <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                            <div>
+                                <p class="normal_p">[2010.01.10]</p>
+                                <!--날짜는 무조건 마지막으로-->
+                            </div>
+                            <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                        </li>
+                        <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                            <div>
+                                <p class="normal_p">[2010.01.10]</p>
+                                <!--날짜는 무조건 마지막으로-->
+                            </div>
+                            <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                        </li>
+                        <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                            <div>
+                                <p class="normal_p">[2010.01.10]</p>
+                                <!--날짜는 무조건 마지막으로-->
+                            </div>
+                            <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <ul class="atten_ul">
+                        <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                            <div>
+                                <p class="new_p">신규</p>
+                                <p class="normal_p">[2010.01.10]</p>
+                                <!--날짜는 무조건 마지막으로-->
+                            </div>
+                            <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                        </li>
+                        <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                            <div>
+                                <p class="normal_p">[2010.01.10]</p>
+                                <!--날짜는 무조건 마지막으로-->
+                            </div>
+                            <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                        </li>
+                        <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                            <div>
+                                <p class="normal_p">[2010.01.10]</p>
+                                <!--날짜는 무조건 마지막으로-->
+                            </div>
+                            <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                        </li>
+                        <li onclick="location.href='./receipt_in1.html'" class="atten_li1">
+                            <div>
+                                <p class="normal_p">[2010.01.10]</p>
+                                <!--날짜는 무조건 마지막으로-->
+                            </div>
+                            <p>국민보호와 공공안전을 위한 테러방지법 일부 개정법률안 (안병..</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 5,
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+            var swiper2 = new Swiper(".mySwiper2", {
+                loop: true,
+                spaceBetween: 30,
+                thumbs: {
+                    swiper: swiper,
+                },
+            });
+        </script>
+    </div>
+    <div class="trick"></div>
+    <footer>
+        <ul>
+            <li onclick="location.href='../index.html'">
+                <div class="ft_act"></div>
+                <p class="ft_act_p">홈</p>
+            </li>
+            <li onclick="location.href='./attention.html'">
+                <div></div>
+                <p>내 관심법안</p>
+            </li>
+            <li onclick="location.href='./category.html'">
+                <div></div>
+                <p>카테고리</p>
+            </li>
+            <li onclick="location.href='./search.html'">
+                <div></div>
+                <p>검색</p>
+            </li>
+            <li onclick="location.href='./set.html'">
+                <div></div>
+                <p>설정</p>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

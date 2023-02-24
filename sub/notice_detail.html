@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.8)">
+    <meta http-equiv="page-exit" content="blendTrans(duration=0.8)">
+    <title>로티스</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style type="text/css">
+        input[type="checkbox"] {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        label {
+            display: block;
+            position: relative;
+            width: 60px;
+            height: 6.666vw;
+            border-radius: 17px;
+            background-color: #ddd;
+            transition-duration: 0.2s;
+        }
+
+        label span {
+            position: absolute;
+            left: 3px;
+            top: 50%;
+            transform: translateY(-50%);;
+            z-index: 1;
+            width: 5.555vw;
+            height: 5.555vw;
+            border-radius: 50%;
+            background-color: #fff;
+            transition-duration: 0.2s;
+        }
+
+        label:before,
+        label:after {
+            position: absolute;
+            top: 0;
+            width: 13.333vw;
+            line-height: 34px;
+            color: #fff;
+            text-align: center;
+        }
+
+        label:before {
+            left: 0;
+        }
+
+        label:after {
+            right: 0;
+        }
+
+        input:checked+label {
+            background-color: #5F0080;
+        }
+
+        input:checked+label span {
+            /* left: 29px; */
+            transform: translate(9.222vw,-50%);
+        }
+    </style>
+
+<body>
+    <header>
+        <div class="hd_1">
+            <a href="javascript:history.back()" class="back"></a>
+            <p class="title">공지사항</p>
+        </div>
+    </header>
+    <section class="notice_detail">
+        <div class="top">
+            <p class="title">공지사항 제목을 입력해주세요.</p>
+            <p style="color: #666;">[2020.01.10]</p>
+        </div>
+        <div class="mid">
+            <p class="title">안녕하세요. 로티스입니다.</p>
+            <p style="color: #FE0400;">내용이 표시됩니다.</p>
+        </div>
+    </section>
+    <div class="trick"></div>
+    <footer>
+        <button type="button" class="share_bt">
+            <div></div>
+        </button>
+        <ul>
+            <li onclick="location.href='../index.html'">
+                <div></div>
+                <p>홈</p>
+            </li>
+            <li onclick="location.href='./attention.html'">
+                <div></div>
+                <p>내 관심법안</p>
+            </li>
+            <li onclick="location.href='./category.html'">
+                <div class="ft_act"></div>
+                <p class="ft_act_p">카테고리</p>
+            </li>
+            <li onclick="location.href='./search.html'">
+                <div></div>
+                <p>검색</p>
+            </li>
+            <li onclick="location.href='./set.html'">
+                <div></div>
+                <p>설정</p>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

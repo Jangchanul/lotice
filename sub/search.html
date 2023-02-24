@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.8)">
+    <meta http-equiv="page-exit" content="blendTrans(duration=0.8)">
+    <title>로티스</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.ser_bt').click(function(){
+
+            })
+        });    
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="hd_1"><h1><img src="../img/logo1.png" alt=""></h1></div>
+    </header>
+    <div class="contant_wrap">
+        <div class="search_rap">
+            <div class="sear_sel">
+                <select name="" id="" class="sear_sel">
+                    <option value="">법안</option>
+                    <option value="">국회의원</option>
+                </select>
+                <div>
+                    <img src="../img/bottom_1.png" alt="">
+                </div>
+            </div>
+            <div class="sear_ins">
+                <input type="text" placeholder="검색어를 입력 해주세요">
+                <button type="button" class="ser_bt"></button>
+            </div>
+        </div>
+        <div class="ser_1" style="display: none;">
+            <h3 style="font-size: 3.888vw;text-align: center;padding: 3.333vw 0 5vw;color: #666;">'검색어' 검색 결과</h3>
+            <ul class="atten_ul">
+                <li onclick="location.href='#'">
+                    <div class="ddd">
+                        <p class="new_p">신규</p>
+                        <p class="normal_p">[날짜]</p>
+                    </div>
+                    <p>검색어 포함 법률제목</p>
+                </li>
+                <li onclick="location.href=''">
+                    <div class="ddd">
+                        <p class="normal_p">[2010.01.10]</p>
+                    </div>
+                    <p>검색어 포함 법률제목</p>
+                </li>
+            </ul>
+        </div>
+        <div class="ser_2">
+            <div class="top">
+                <div>
+                    <input type="radio" id="ck1" name="ck1">
+                    <label for="ck1">정당별 찾기</label>
+                </div>
+                <div>
+                    <input type="radio" id="ck2" name="ck1" class="ganada">
+                    <label for="ck2">가나다 순 찾기</label>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="trick"></div>
+    <footer>
+        <button type="button" class="share_bt"><div></div></button>
+        <ul>
+            <li onclick="location.href='../index.html'">
+                <div></div>
+                <p>홈</p>
+            </li>
+            <li onclick="location.href='./attention.html'">
+                <div></div>
+                <p>내 관심법안</p>
+            </li>
+            <li onclick="location.href='./category.html'">
+                <div></div>
+                <p>카테고리</p>
+            </li>
+            <li onclick="location.href='./search.html'">
+                <div class="ft_act"></div>
+                <p class="ft_act_p">검색</p>
+            </li>
+            <li onclick="location.href='./set.html'">
+                <div></div>
+                <p>설정</p>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

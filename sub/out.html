@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.8)">
+    <meta http-equiv="page-exit" content="blendTrans(duration=0.8)">
+    <title>로티스</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.ser_2 .ganada').click(function(){
+                $('.ser_2 .mid').show()
+            })
+            $('.ser_2 .hh').click(function(){
+                $('.ser_2 .mid').hide()
+            })
+        });    
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="hd_1">
+            <a href="javascript:history.back()" class="back"></a>
+            <p class="title">개인정보관리</p>
+        </div>
+    </header>
+    <section class="out">
+        <p class="a">회원탈퇴</p>
+        <p class="b">로티스 탈퇴 전 확인하세요</p>
+        <div class="top">
+            <p>탈퇴하시면 이용 중인 로티스 서비스가 중단되며,</p>
+            <p>모든 데이터는 복구가 불가능합니다.</p>
+        </div>
+        <input type="checkbox" id="ck1" name="ck1">
+        <label for="ck1">안내사항을 모두 확인하였으며, 이에 동의합니다.</label>
+        <button>탈퇴하기</button>
+    </section>
+    <div class="trick"></div>
+    <footer>
+        <button type="button" class="share_bt"><div></div></button>
+        <ul>
+            <li onclick="location.href='../index.html'">
+                <div></div>
+                <p>홈</p>
+            </li>
+            <li onclick="location.href='./attention.html'">
+                <div></div>
+                <p>내 관심법안</p>
+            </li>
+            <li onclick="location.href='./category.html'">
+                <div></div>
+                <p>카테고리</p>
+            </li>
+            <li onclick="location.href='./search.html'">
+                <div class="ft_act"></div>
+                <p class="ft_act_p">검색</p>
+            </li>
+            <li onclick="location.href='./set.html'">
+                <div></div>
+                <p>설정</p>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

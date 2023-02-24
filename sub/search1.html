@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.8)">
+    <meta http-equiv="page-exit" content="blendTrans(duration=0.8)">
+    <title>로티스</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.ser_2 .ganada').click(function(){
+                $('.ser_2 .mid').show()
+            })
+            $('.ser_2 .hh').click(function(){
+                $('.ser_2 .mid').hide()
+            })
+        });    
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="hd_1">
+            <a href="javascript:history.back()" class="back"></a>
+            <p class="title">국회의원 정보</p>
+        </div>
+    </header>
+    <div class="contant_wrap">
+        <div class="search_rap">
+            <p class="member">국회의원</p>
+            <div class="sear_ins">
+                <input type="text" placeholder="검색어를 입력 해주세요">
+                <button type="button" class="ser_bt"></button>
+            </div>
+        </div>
+        <div class="ser_1" style="display: none;">
+            <h3 style="font-size: 3.888vw;text-align: center;padding: 3.333vw 0 5vw;color: #666;">'검색어' 검색 결과</h3>
+            <ul class="atten_ul">
+                <li onclick="location.href='#'">
+                    <div class="ddd">
+                        <p class="new_p">신규</p>
+                        <p class="normal_p">[날짜]</p>
+                    </div>
+                    <p>검색어 포함 법률제목</p>
+                </li>
+                <li onclick="location.href=''">
+                    <div class="ddd">
+                        <p class="normal_p">[2010.01.10]</p>
+                    </div>
+                    <p>검색어 포함 법률제목</p>
+                </li>
+            </ul>
+        </div>
+        <div class="ser_2">
+            <div class="top">
+                <div>
+                    <input type="radio" id="ck1" name="ck1" class="hh">
+                    <label for="ck1">정당별 찾기</label>
+                </div>
+                <div>
+                    <input type="radio" id="ck2" name="ck1" class="ganada">
+                    <label for="ck2">가나다 순 찾기</label>
+                    
+                </div>
+            </div>
+            <div class="mid" style="display: none;">
+                <ul class="ganada1">
+                    <li>
+                        <input type="radio" id="wo1" name="ganada">
+                        <label for="wo1">ㄱ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo2" name="ganada">
+                        <label for="wo2">ㄴ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo3" name="ganada">
+                        <label for="wo3">ㄷ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo4" name="ganada">
+                        <label for="wo4">ㄹ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo5" name="ganada">
+                        <label for="wo5">ㅁ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo6" name="ganada">
+                        <label for="wo6">ㅂ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo7" name="ganada">
+                        <label for="wo7">ㅅ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo8" name="ganada">
+                        <label for="wo8">ㅇ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo9" name="ganada">
+                        <label for="wo9">ㅈ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo10" name="ganada">
+                        <label for="wo10">ㅊ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo11" name="ganada">
+                        <label for="wo11">ㅋ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo12" name="ganada">
+                        <label for="wo12">ㅌ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo13" name="ganada">
+                        <label for="wo13">ㅍ</label>
+                    </li> 
+                    <li>
+                        <input type="radio" id="wo14" name="ganada">
+                        <label for="wo14">ㅎ</label>
+                    </li> 
+                 </ul>
+            </div>
+        </div>
+        <ul class="m_li">
+            <li onclick="location.href='assembly_details.html'">
+                <figure><img src="../img/mem.png" alt=""></figure>
+                <div class="ab">
+                    <div class="a">
+                        <p class="name">노웅래</p>
+                        <p class="belong">더불어민주당</p>
+                    </div>
+                    <p class="b">4선 정보위원회</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="trick"></div>
+    <footer>
+        <button type="button" class="share_bt"><div></div></button>
+        <ul>
+            <li onclick="location.href='../index.html'">
+                <div></div>
+                <p>홈</p>
+            </li>
+            <li onclick="location.href='./attention.html'">
+                <div></div>
+                <p>내 관심법안</p>
+            </li>
+            <li onclick="location.href='./category.html'">
+                <div></div>
+                <p>카테고리</p>
+            </li>
+            <li onclick="location.href='./search.html'">
+                <div class="ft_act"></div>
+                <p class="ft_act_p">검색</p>
+            </li>
+            <li onclick="location.href='./set.html'">
+                <div></div>
+                <p>설정</p>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

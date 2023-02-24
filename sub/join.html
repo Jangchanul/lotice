@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.8)">
+    <meta http-equiv="page-exit" content="blendTrans(duration=0.8)">
+    <title>로티스</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 체크박스 전체 선택
+            $(".checkbox_group").on("click", "#check_all", function () {
+                $(this).parents(".checkbox_group").find('input').prop("checked", $(this).is(
+                ":checked"));
+            });
+
+            // 체크박스 개별 선택
+            $(".checkbox_group").on("click", ".normal", function () {
+                var is_checked = true;
+
+                $(".checkbox_group .normal").each(function () {
+                    is_checked = is_checked && $(this).is(":checked");
+                });
+
+                $("#check_all").prop("checked", is_checked);
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="hd_1">
+            <a href="javascript:history.back()" class="back"></a>
+            <p class="title">추가정보입력</p>
+        </div>
+    </header>
+    <section class="join">
+        <div class="top">
+            <input type="email" placeholder="이메일을 입력하세요" onfocus="this.placeholder=''" onblur="this.placeholder='이메일을 입력하세요'">
+            <p class="red">* 이메일 형식이 올바르지 않습니다.</p>
+            </div>
+        <ul class="checkbox_group">
+            <li class="li1">
+                <div>
+                    <p>약관동의</p>
+                    <input type="checkbox" id="check_all">
+                    <label for="check_all">전체 동의</label>
+                </div>
+            </li>
+            <li>
+
+                <div>
+                    <p onclick="location.href='policy2.html'">개인정보 처리방침 동의<b>(필수)</b></p>
+                    <input type="checkbox" id="check_1" class="normal">
+                    <label for="check_1"></label>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p onclick="location.href='policy1.html'">서비스 이용약관 동의<b>(필수)</b></p>
+                    <input type="checkbox" id="check_2" class="normal">
+                    <label for="check_2"></label>
+                </div>
+            </li>
+        </ul>
+        <button onclick="location.href='/lotice/org/index.html'">회원가입 완료</button>
+    </section>
+</body>
+
+</html>

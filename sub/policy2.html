@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.8)">
+    <meta http-equiv="page-exit" content="blendTrans(duration=0.8)">
+    <title>로티스</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 체크박스 전체 선택
+            $(".checkbox_group").on("click", "#check_all", function () {
+                $(this).parents(".checkbox_group").find('input').prop("checked", $(this).is(
+                    ":checked"));
+            });
+
+            // 체크박스 개별 선택
+            $(".checkbox_group").on("click", ".normal", function () {
+                var is_checked = true;
+
+                $(".checkbox_group .normal").each(function () {
+                    is_checked = is_checked && $(this).is(":checked");
+                });
+
+                $("#check_all").prop("checked", is_checked);
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="hd_1">
+            <a href="javascript:history.back()" class="back"></a>
+            <p class="title">개인정보관리</p>
+        </div>
+    </header>
+    <section class="policy">
+        <p class="title">개인정보처리방침</p>
+        <div>
+            <p>로티스는 본인인증서비스 제공을 위해 본인으로부터 아래의 개인정보를 입력받으며, 입력받은 개인정보의 이용 및 활용을 위해 다음의 사항에 대하여 본인으로부터 동의를 받습니다.</p>
+            
+            <p>1. 입력받는 정보</p>
+            <ul>
+                <li>
+                    가. 정보항복
+                </li>
+                <li>성명, 이메일주소</li>
+                <li>나. 입력방법</li>
+                <li>회원가입시 추가정보 페이지에서 이용자가 직접 입력</li>
+            </ul>
+            <p>2. 개인정보의 이용목적과 수집 및 제공 정보</p>
+            <ul>
+                <li>가. 이용목적</li>
+                <li>서비스(회원가입, ID/PW찾기 등)이용을 위한 본인인증 부정 이용방지 및 수사의뢰 기타 법률에서 정한 목적</li>
+                <li>나. 수집 및 제공하는 정보</li>
+                <li>성명, 이메일 주소</li>
+                <li>IP주소 [제공사: 서비스 회원사]</li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>
